@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, type ComponentType, type SVGProps } from "react";
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from '../ui/ThemeToggle'
 import Link from "next/link";
-import { GithubIcon } from './github'
+import { GithubIcon } from '../ui/github'
 import { Menu, X } from 'lucide-react'
 import {
   FaInstagram,

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "./providers/SmoothScroll";
 import { ThemeProvider } from "./providers/ThemeProvider";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/layout/Footer";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
