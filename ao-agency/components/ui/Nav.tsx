@@ -67,7 +67,7 @@ function Nav() {
 
   return (
     <>
-      <header className="absolute top-0 z-50 backdrop-blur-lg border-b border-border/60 w-[80%] mx-auto right-0 left-0 mt-[3vh] rounded-2xl">
+      <header className="absolute top-0  z-50 backdrop-blur-lg border-b border-border/60 w-[80%] mx-auto right-0 left-0 mt-[3vh] rounded-2xl">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span

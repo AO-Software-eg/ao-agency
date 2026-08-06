@@ -58,7 +58,7 @@ function Hero() {
       >
         {/* text content */}
         <Nav />
-        <div className='w-full flex-1 flex items-center justify-center py-25 sm:py-10'>
+        <div className='w-full flex-1 flex items-center justify-center py-30 md:py-25 sm:py-10'>
           <div className='w-full text-center px-4 sm:p-4 rounded-xl flex flex-col gap-4'>
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight">
               From idea to{" "}
