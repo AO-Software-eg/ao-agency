@@ -1,4 +1,4 @@
-import { TextHoverEffect } from "./text-hover-effect"
+import { TextHoverEffect } from "../ui/text-hover-effect"
 
 function Footer() {
     return (
