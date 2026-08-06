@@ -1,5 +1,5 @@
-import FlowmapBackground from "@/components/ui/FlowMap/FlowMapBg";
-import Grainient from '../../ui/Grainent';
+import FlowmapBackground from "@/components/ui/GradientBg/FlowMap/FlowMapBg";
+import Grainient from '../../GradientBg/Grainent';
 
 function BackGround() {
   return (

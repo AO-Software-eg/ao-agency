@@ -9,7 +9,7 @@ function InfoCard() {
                     <h1 className="text-4xl font-bold leading-11">
                         AO designs and builds modern digital products that help businesses launch faster, scale confidently.
                     </h1>
-                    <p className="text-lg font-thin leading-8 text-left w-[150%] lg:w-[100%]"> 
+                    <p className="text-lg font-thin leading-8 text-left w-[150%] lg:w-full"> 
                         {"{ - From high performance websites and SaaS platforms to AI-powered solutions and custom software, we turn ambitious ideas into reliable, production-ready products. }"}
                     </p>
                 </div>
