@@ -1,0 +1,6 @@
+@ao_agency_backend_HostAddress = http://localhost:5270
+
+GET {{ao_agency_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
