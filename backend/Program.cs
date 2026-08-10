@@ -3,8 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgencyBackend
 {
+    public class Project
+    {
+        public long id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+    }
+
     public class AgencyDbContext : DbContext
     {
+        public DbSet<Project> projects { get; set; }
+
         public AgencyDbContext(DbContextOptions<AgencyDbContext> options)
             : base(options) { }
     }
