@@ -5,14 +5,14 @@ namespace AgencyBackend
 {
     public class Project
     {
-        public long id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
+        public long Id { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
     }
 
     public class AgencyDbContext : DbContext
     {
-        public DbSet<Project> projects { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
         public AgencyDbContext(DbContextOptions<AgencyDbContext> options)
             : base(options) { }
