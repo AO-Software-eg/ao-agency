@@ -25,6 +25,13 @@ namespace AgencyBackend
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddAuthorization();
             builder.Services.AddOpenApi();
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
 
             string? connectionString = builder.Configuration.GetConnectionString(
                 "DefaultConnection"
@@ -45,6 +52,7 @@ namespace AgencyBackend
                 app.MapOpenApi();
             }
             app.UseHttpsRedirection();
+            app.UseCors();
             app.UseAuthorization();
 
             app.MapGet(
