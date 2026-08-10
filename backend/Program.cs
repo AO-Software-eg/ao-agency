@@ -64,6 +64,33 @@ namespace AgencyBackend
                 )
                 .WithName("Get");
 
+            app.MapPost(
+                "/projects/add",
+                async (HttpContext httpContext, AgencyDbContext dbContext, Project project) =>
+                {
+                    dbContext.Projects.Add(project);
+
+                    await dbContext.SaveChangesAsync();
+
+                    return Results.Ok();
+                }
+            );
+            app.MapGet(
+                "/projects/get/{projectId}",
+                async (HttpContext httpContext, AgencyDbContext dbContext, long projectId) =>
+                {
+                    Project? result = await dbContext.Projects.FindAsync(projectId);
+                    if (result != null)
+                    {
+                        return Results.Ok(result);
+                    }
+                    else
+                    {
+                        return Results.NotFound();
+                    }
+                }
+            );
+
             app.Run();
         }
     }
