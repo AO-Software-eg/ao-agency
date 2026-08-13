@@ -1,0 +1,394 @@
+Yes — since the image URLs and `next.config.ts` remote-image configuration are **already implemented**, the modification prompt should explicitly tell the agent **not to touch that setup**.
+
+For the buttons, I'd make them **sticky within the left feature/content column**, not sticky to the entire viewport. So while the feature text changes, the two actions remain at the bottom of that content area:
+
+`GitHub` + `Live Demo`
+
+Here’s the updated prompt:
+
+Modify **only the E-learning showcase** in `components/projects/Elearning/`.
+
+The image URLs and remote image configuration from the previous implementation are **already completed and working**. Do NOT add, remove, or modify the existing `next.config.ts` image configuration. Do not reconfigure the image URLs. Reuse the existing assets/setup.
+
+I want to modify the current E-learning showcase to use **Option B: a single visual storytelling showcase** instead of multiple screenshot cards.
+
+### Core concept
+
+The three screenshots should feel like **one product interface transforming through different states**:
+
+**Student Dashboard → Smart Exams → Grades & Performance**
+
+Do NOT create three separate screenshot cards.
+
+Use one large screenshot viewport/container and smoothly transition the image inside it as the user scrolls.
+
+Existing screenshots:
+
+* Dashboard: `https://ty574q8ip.ufs.sh/f/E45AsRPZALlHdc9sFMBDJi72Vcpg91X4WUyeaulEsATCfbxS`
+* Quiz: `https://ty574q8ip.ufs.sh/f/E45AsRPZALlHMZ9eWBjfRDOmZTzarUuNBLF5cwC7isIlqe36`
+* Grades: `https://ty574q8ip.ufs.sh/f/E45AsRPZALlHKtDqolaRVM23sUtEh8axmCYuFZIzn10HLToQ`
+
+---
+
+## Layout
+
+Use a two-column scroll-driven layout on desktop.
+
+### Left
+
+Project/feature content:
+
+```text id="8u8gk4"
+01
+
+Student Dashboard
+
+Understand your progress
+
+Track your academic progress and
+understand which areas need more attention.
+
+✓ Track your learning progress
+✓ Understand your performance
+✓ Identify areas that need improvement
+
+
+[ GitHub ]  [ Live Demo ]
+```
+
+### Right
+
+One large sticky screenshot viewport.
+
+The screenshot stays in approximately the same position while scrolling through the three stages.
+
+---
+
+## Project header
+
+Before the showcase content, include:
+
+**01**
+
+**منصة السلطان**
+
+`E-learning Platform`
+
+A short description about the project.
+
+Include a subtle technology row , for example:
+
+Next.js · React · TypeScript · Tailwind CSS · shadcn/ui · Node.js · Express · PostgreSQL · Supabase · Prisma · Drizzle · TanStack Query · Zustand · VdoCipher · Paymob · Redis · Vercel
+
+Do not make this section visually heavy.
+
+---
+
+# Feature stages
+
+### Stage 01 — Student Dashboard
+
+Use the existing Dashboard screenshot.
+
+Title:
+
+`Understand your progress`
+
+Description:
+
+`Track your academic progress and understand which areas need more attention.`
+
+Bullets:
+
+* Track your learning progress
+* Understand your performance
+* Identify areas that need improvement
+
+The Dashboard screenshot should be the initial active visual.
+
+---
+
+### Stage 02 — Smart Exams
+
+Use the existing Quiz screenshot.
+
+Title:
+
+`Test your knowledge`
+
+Description:
+
+`Take structured exams designed to measure your understanding, not just your ability to memorize.`
+
+Bullets:
+
+* Timed examination experience
+* Track your answers while testing
+* Review your performance
+
+As the user scrolls into Stage 02:
+
+* Stage 01 content transitions out
+* Stage 02 content transitions in
+* Dashboard smoothly transitions into Quiz
+* Quiz becomes the active screenshot
+
+---
+
+### Stage 03 — Grades & Performance
+
+Use the existing Grades screenshot.
+
+Title:
+
+`Turn results into progress`
+
+Description:
+
+`See how your performance changes over time and discover exactly where you can improve.`
+
+Bullets:
+
+* Keep track of your exam results
+* See your progress over time
+* Identify your weakest areas
+
+The Grades screenshot should become the final active visual.
+
+---
+
+# Screenshot transition
+
+Do not simply swap the image when the feature changes.
+
+Use scroll progress to create a subtle transition.
+
+For example:
+
+Old screenshot:
+
+* opacity: 1 → 0
+* scale: 1 → 0.97
+* slight upward movement
+
+New screenshot:
+
+* opacity: 0 → 1
+* scale: 1.02 → 1
+* slight downward movement into position
+
+Keep the animation subtle and premium.
+
+No aggressive 3D rotations or flashy transitions.
+
+The screenshot should feel like the product is **changing state**.
+
+---
+
+# Feature content animation
+
+Feature content should be connected to scroll progress.
+
+For each stage:
+
+1. Feature number becomes active
+2. Title appears
+3. Description appears
+4. First bullet appears
+5. Second bullet appears
+6. Third bullet appears
+
+Use subtle opacity + translate animations.
+
+Do not make the bullets look like generic card content.
+
+---
+
+# Sticky GitHub + Live Demo actions
+
+Add **two action buttons at the bottom of the left feature/content area**:
+
+```text id="eq2m3p"
+┌─────────────────────┐  ┌─────────────────────┐
+│       GitHub        │  │      Live Demo      │
+└─────────────────────┘  └─────────────────────┘
+```
+
+### Behavior
+
+These buttons should remain **sticky at the bottom of the left content column while the user scrolls through the showcase**.
+
+They should not scroll away with each feature's text.
+
+The feature content above them can change between Dashboard → Quiz → Grades, while the actions remain visually anchored at the bottom.
+
+Use something equivalent to:
+
+```text
+feature content
+      ↓
+      ↓
+      ↓
+
+────────────────────────
+[ GitHub ] [ Live Demo ]
+```
+
+The buttons should have a subtle background/border treatment consistent with the existing portfolio.
+
+### GitHub button
+
+* Use the existing GitHub icon/component if available.
+* Link to the E-learning project's GitHub repository.
+* Open in a new tab.
+
+### Live Demo button
+
+* Use an appropriate external-link/play/globe icon from the existing icon system.
+* Link to the actual E-learning live demo.
+* Open in a new tab.
+
+
+If the URLs are currently missing, leave the button structure ready for the existing project data rather than inventing a URL.
+
+---
+
+# Sticky behavior
+
+The left side should effectively behave like:
+
+```text id="9tw8jf"
+┌────────────────────────────┐
+│                            │
+│ Feature content            │
+│                            │
+│ Changes while scrolling    │
+│                            │
+│                            │
+│                            │
+│ ─────────────────────────  │
+│ [ GitHub ] [ Live Demo ]   │ ← sticky
+└────────────────────────────┘
+```
+
+The right side:
+
+```text id="c8c5xk"
+┌─────────────────────────────┐
+│                             │
+│       STICKY SCREENSHOT     │
+│                             │
+│ Dashboard → Quiz → Grades   │
+│                             │
+└─────────────────────────────┘
+```
+
+Both sides should feel synchronized.
+
+---
+
+# Mobile
+
+Do **not** fall back to  normal cards or  ordinary screenshot cards.
+
+Preserve the storytelling approach.
+
+On mobile, use a single large screenshot viewport with the feature content associated with it.
+
+Recommended structure:
+
+```text id="4r3c90"
+01
+Student Dashboard
+Description
+Bullets
+
+        [ Dashboard ]
+
+        ↓ scroll
+
+02
+Smart Exams
+Description
+Bullets
+
+        [ Quiz ]
+
+        ↓ scroll
+
+03
+Grades
+Description
+Bullets
+
+        [ Grades ]
+```
+
+The screenshots should still transition smoothly instead of appearing as separate generic cards.
+
+The GitHub and Live Demo buttons should remain visible/accessible near the bottom of the feature content, but adapt their sticky behavior appropriately for mobile so they never cover important content.
+
+---
+
+# Animation implementation
+
+Use the existing animation system.
+
+If GSAP/ScrollTrigger is already installed, use **GSAP ScrollTrigger**.
+
+Make sure it works with the existing `SmoothScroll.tsx`.
+
+Do not create another smooth scrolling system.
+
+Avoid frequent React state updates during scroll.
+
+Prefer:
+
+* transform
+* opacity
+* scale
+* ScrollTrigger progress
+
+Respect `prefers-reduced-motion`.
+
+---
+
+# Design
+
+Stay consistent with the existing portfolio:
+
+* Near-black background
+* Cream/gold accent
+* Thin borders
+* Large negative space
+* Rounded screenshot container
+* Minimal typography
+* Subtle motion
+
+Do not introduce generic SaaS cards, excessive gradients, neon colors, heavy glassmorphism, or unnecessary decorative elements.
+
+The screenshots should remain the main visual focus.
+
+---
+
+# Important constraints
+
+* Modify **only** the E-learning project showcase.
+* Do not modify the other projects.
+* Do not modify the navbar/footer/global sections.
+* Do NOT modify the existing image URLs or `next.config.ts`.
+* Do NOT recreate the remote image configuration.
+* Reuse the existing E-learning assets and project data.
+* Reuse existing GitHub/live-demo URLs if already present.
+* Do not invent URLs.
+* Do not create three separate screenshot cards.
+* Do not turn the mobile version into a generic card grid.
+* Keep the implementation TypeScript-safe and performant.
+* Ensure there is no horizontal overflow.
+* Preserve the existing visual identity.
+
+The final experience should feel like:
+
+**One project → one visual story → Dashboard → Exams → Results**
+
+with the **feature content changing on the left, the screenshot transforming on the right, and GitHub + Live Demo remaining anchored at the bottom of the feature column.**
