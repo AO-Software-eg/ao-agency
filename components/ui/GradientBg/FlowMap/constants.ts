@@ -32,9 +32,6 @@ export const DEFAULT_PROPS = {
 /** Flowmap resolution — a small offscreen target is plenty for a soft trail. */
 export const FLOWMAP_SIZE = 512;
 
-/** Cap on device pixel ratio to keep retina displays from tanking frame time. */
-export const MAX_DPR = 2;
-
 /**
  * How much the raw pointer velocity is smoothed each frame before being
  * written into the flowmap. Higher = softer, more elegant trail;
