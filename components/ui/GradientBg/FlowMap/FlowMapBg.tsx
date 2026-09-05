@@ -34,7 +34,6 @@ import {
   DEFAULT_PALETTE,
   DEFAULT_PROPS,
   FLOWMAP_SIZE,
-  MAX_DPR,
   MIN_FRAME_DELTA_MS,
   VELOCITY_SMOOTHING,
 } from "./constants";

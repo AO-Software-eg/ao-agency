@@ -10,7 +10,8 @@ import { fadeUpBlur, staggerContainer } from "../ui/motion/variants";
 
 function Hero() {
   return (
-    <div className="relative w-[90%] sm:w-[85%] lg:w-[95%] mx-auto my-10 min-h-[90vh] lg:h-[95vh] rounded-xl flex flex-col overflow-hidden bg-background light:bg-white">
+    <div className="relative w-[90%] sm:w-[85%] lg:w-[95%] mx-auto my-10 min-h-[90vh] rounded-xl flex flex-col overflow-hidden bg-background light:bg-white">
+
       <BackGround />
 
       <div className="relative w-[90%] sm:w-[85%] lg:w-[95%] mx-auto my-10 min-h-[90vh] rounded-xl flex flex-col z-3">
