@@ -35,8 +35,7 @@ function Hero() {
               variants={fadeUpBlur}
               className="text-foreground text-base sm:text-lg md:text-xl font-thin px-2"
             >
-              AO - We design and build modern web platforms, SaaS products, and
-              enterprise applications that are fast, scalable.
+            AO is a software studio that turns ideas into scalable digital products — combining thoughtful product design with serious engineering to build software that can grow, adapt and last.
             </motion.p>
 
             <motion.div
@@ -44,14 +43,14 @@ function Hero() {
               className="flex flex-wrap gap-4 justify-center mt-4"
             >
               <CtaBtn />
-              <Button text="github" primary={false} />
+              <Button text="see our work" primary={false} />
             </motion.div>
 
             <motion.p
               variants={fadeUpBlur}
               className="group text-foreground text-sm font-thin mt-4 cursor-pointer hover:text-primary transition-all duration-200 hover:underline text-balance text-center"
             >
-              see our work{" "}
+               our github{" "}
               <span className="inline-block group-hover:translate-x-5 group-hover:scale-95 transition-all duration-200">
                 {"-->"}
               </span>

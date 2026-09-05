@@ -17,18 +17,18 @@ const features = [
     {
         number: "01",
         eyebrow: "Organize your work",
-        title: "Keep every project under control",
+        title: "Keep every product under control",
         stage: 3,
         description:
-            "Manage projects, organize tasks, and keep your entire product workflow structured from one centralized workspace.",
+            "Manage products, organize tasks, and keep your entire product workflow structured from one centralized workspace.",
         bullets: [
-            "Organize projects and tasks",
+            "Organize products and tasks",
             "Track work across different stages",
             "Keep product information in one place",
         ],
         image:
-            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHUjr6ChvYwWeSiKVqNhsr8yvpBd5J9EUnAGTu",
-        alt: "Product management dashboard showing projects, tasks, and overall product progress",
+            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHd7YELeBDJi72Vcpg91X4WUyeaulEsATCfbxS",
+        alt: "Product management dashboard showing products, tasks, and overall product progress",
     },
     {
         number: "02",
@@ -43,7 +43,7 @@ const features = [
             "Keep teams aligned on priorities",
         ],
         image:
-            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHUjr6ChvYwWeSiKVqNhsr8yvpBd5J9EUnAGTu",
+            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHkcp6IB3H1bL6UKlhAnG3drjXNef2v5OWaQE0",
         alt: "Task management interface showing product tasks, statuses, and assignments",
     },
     {
@@ -59,7 +59,7 @@ const features = [
             "Understand team and product performance",
         ],
         image:
-            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHUjr6ChvYwWeSiKVqNhsr8yvpBd5J9EUnAGTu",
+            "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHhypT6W5JKvqZyIoQMx3wYG0gltNehnW75FpO",
         alt: "Product analytics dashboard showing project progress and performance insights",
     },
 ] as const;
