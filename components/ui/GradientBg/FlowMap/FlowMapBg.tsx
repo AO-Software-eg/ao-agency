@@ -85,7 +85,7 @@ export default function FlowmapBackground({
 
     // --- Renderer / camera / canvas -----------------------------------
     const renderer = new Renderer({
-      dpr: getSafeDpr(MAX_DPR),
+      dpr: getSafeDpr(container),
       alpha: true,
       antialias: true,
     });

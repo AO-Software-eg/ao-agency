@@ -50,9 +50,16 @@ export function hexToRgb(hex: string): RgbColor {
 }
 
 /** Device pixel ratio, capped so retina displays don't tank performance. */
-export function getSafeDpr(maxDpr = 2): number {
+export function getSafeDpr(container: HTMLDivElement): number {
   if (typeof window === "undefined") return 1;
-  return clamp(window.devicePixelRatio || 1, 1, maxDpr);
+
+  const rect = container.getBoundingClientRect();
+  const w = Math.max(1, rect.width);
+  const h = Math.max(1, rect.height);
+  const screenDPR = window.devicePixelRatio || 1;
+  const maxDPR = 320 / w;
+
+  return Math.min(screenDPR, maxDPR);
 }
 
 /**
@@ -66,7 +73,7 @@ export function prefersReducedMotion(): boolean {
 
 /** Reads the pointer position from either a mouse or a single-touch event. */
 export function getPointerClientPosition(
-  event: MouseEvent | TouchEvent
+  event: MouseEvent | TouchEvent,
 ): { x: number; y: number } | null {
   if ("changedTouches" in event) {
     const touch = event.changedTouches[0];
