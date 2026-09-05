@@ -10,7 +10,7 @@ const projects: projectsCardProps[] = [
     title: "Alameed",
     description:
       "A modern product management system for organizing projects, managing workflows, and tracking progress in one centralized workspace.",
-    imageUrl: "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHUjr6ChvYwWeSiKVqNhsr8yvpBd5J9EUnAGTu",
+    imageUrl: "https://ty574q8ip7.ufs.sh/f/E45AsRPZALlHkcp6IB3H1bL6UKlhAnG3drjXNef2v5OWaQE0",
     link: "/projects/alameed",
   },
   {
