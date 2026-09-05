@@ -34,6 +34,9 @@ function OurProjects() {
       variants={staggerContainer}
     >
       <motion.p variants={fadeUpBlur} className='text-4xl mb-5'> {"{ Our Projects.. }"} </motion.p>
+      <motion.p variants={fadeUpBlur} className='text-sm mb-5'>
+        Here are some of the projects we have worked on. Each project is a unique piece of development.
+      </motion.p>
 
       {/* grid */}
       <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
