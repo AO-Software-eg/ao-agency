@@ -22,7 +22,7 @@ export const DEFAULT_PROPS = {
   dissipation: 0.965,
   falloff: 0.28,
   blend: 0.4,
-  speed: 0.,
+  speed: 0,
   idleSpeed: 0.06,
   bloomIntensity: 0.8,
   vignette: 0.45,

@@ -30,8 +30,20 @@ import {
 } from "ogl";
 import { cn } from "@/lib/utils";
 import { fragmentShader, vertexShader } from "./shaders";
-import { DEFAULT_PALETTE, DEFAULT_PROPS, FLOWMAP_SIZE, MAX_DPR, MIN_FRAME_DELTA_MS, VELOCITY_SMOOTHING } from "./constants";
-import { getPointerClientPosition, getSafeDpr, hexToRgb, prefersReducedMotion } from "./utils";
+import {
+  DEFAULT_PALETTE,
+  DEFAULT_PROPS,
+  FLOWMAP_SIZE,
+  MAX_DPR,
+  MIN_FRAME_DELTA_MS,
+  VELOCITY_SMOOTHING,
+} from "./constants";
+import {
+  getPointerClientPosition,
+  getSafeDpr,
+  hexToRgb,
+  prefersReducedMotion,
+} from "./utils";
 import type { FlowmapBackgroundProps } from "./types";
 
 export default function FlowmapBackground({
@@ -118,7 +130,9 @@ export default function FlowmapBackground({
       uniforms: {
         tFlow: flowmap.uniform,
         uTime: { value: 0 },
-        uResolution: { value: new Vec2(container.clientWidth, container.clientHeight) },
+        uResolution: {
+          value: new Vec2(container.clientWidth, container.clientHeight),
+        },
         uIntensity: { value: liveProps.current.intensity },
         uBloomIntensity: { value: liveProps.current.bloomIntensity },
         uVignette: { value: liveProps.current.vignette },
@@ -169,7 +183,7 @@ export default function FlowmapBackground({
       const rect = container.getBoundingClientRect();
       pointerUv.set(
         (pos.x - rect.left) / rect.width,
-        1.0 - (pos.y - rect.top) / rect.height
+        1.0 - (pos.y - rect.top) / rect.height,
       );
 
       const now = performance.now();
@@ -205,7 +219,9 @@ export default function FlowmapBackground({
     const listenTarget: HTMLElement = container.parentElement ?? container;
     listenTarget.addEventListener("mousemove", handlePointerMove);
     listenTarget.addEventListener("mouseleave", handlePointerLeave);
-    listenTarget.addEventListener("touchmove", handlePointerMove, { passive: true });
+    listenTarget.addEventListener("touchmove", handlePointerMove, {
+      passive: true,
+    });
     listenTarget.addEventListener("touchend", handlePointerLeave);
 
     // --- Pause when off-screen / tab hidden, to save battery on laptops ---
@@ -219,7 +235,7 @@ export default function FlowmapBackground({
       (entries) => {
         isVisible = entries[0]?.isIntersecting ?? true;
       },
-      { threshold: 0 }
+      { threshold: 0 },
     );
     intersectionObserver.observe(container);
 
@@ -250,7 +266,9 @@ export default function FlowmapBackground({
 
       // Smoothly ease velocity toward its target so the trail never snaps
       // or streaks — this is what keeps the interaction feeling "soft".
-      const smoothing = pointerActive ? VELOCITY_SMOOTHING : VELOCITY_SMOOTHING * 0.5;
+      const smoothing = pointerActive
+        ? VELOCITY_SMOOTHING
+        : VELOCITY_SMOOTHING * 0.5;
       smoothedVelocity.x += (targetVelocity.x - smoothedVelocity.x) * smoothing;
       smoothedVelocity.y += (targetVelocity.y - smoothedVelocity.y) * smoothing;
 
@@ -297,7 +315,10 @@ export default function FlowmapBackground({
     <div
       ref={containerRef}
       aria-hidden="true"
-      className={cn("absolute inset-0 overflow-hidden pointer-events-none", className)}
+      className={cn(
+        "absolute inset-0 overflow-hidden pointer-events-none",
+        className,
+      )}
     />
   );
 }
