@@ -1,4 +1,10 @@
 import type { NextConfig } from "next";
+import next from "next";
+import withBundleAnalyzer from "@next/bundle-analyzer";
+
+const bundleAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
   images: {
@@ -10,10 +16,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "ty574q8ip.ufs.sh",
-      }
+      },
     ],
   },
-  allowedDevOrigins: ['192.168.1.7'],
+  allowedDevOrigins: ["192.168.1.7", "192.168.1.15"],
 };
 
-export default nextConfig;
+export default bundleAnalyzer(nextConfig);

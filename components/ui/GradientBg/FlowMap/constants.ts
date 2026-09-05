@@ -22,7 +22,7 @@ export const DEFAULT_PROPS = {
   dissipation: 0.965,
   falloff: 0.28,
   blend: 0.4,
-  speed: 0.,
+  speed: 0,
   idleSpeed: 0.06,
   bloomIntensity: 0.8,
   vignette: 0.45,
@@ -31,9 +31,6 @@ export const DEFAULT_PROPS = {
 
 /** Flowmap resolution — a small offscreen target is plenty for a soft trail. */
 export const FLOWMAP_SIZE = 512;
-
-/** Cap on device pixel ratio to keep retina displays from tanking frame time. */
-export const MAX_DPR = 2;
 
 /**
  * How much the raw pointer velocity is smoothed each frame before being
