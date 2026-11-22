@@ -8,7 +8,7 @@ import Contact from "../components/sections/Contact";
 import TechStack from "@/components/sections/TechStack";
 
 const Projects = dynamic(() => import("@/components/projects/Projects"));
-const OurProjects = dynamic(() => import("@/components/sections/OurProjects"));
+// const OurProjects = dynamic(() => import("@/components/sections/OurProjects"));
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Philosophy />
       <Projects />
-      <OurProjects />
+      {/* <OurProjects /> */}
       <TechStack />
 
       <Contact />
